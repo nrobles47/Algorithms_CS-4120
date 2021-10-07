@@ -1,6 +1,3 @@
-# Out Files
-Sorts_Out.txt
-
 # Prerequisites
 *.d
 
@@ -37,3 +34,4 @@ Sorts_Out.txt
 # Others
 /Debug
 /.vs
+*.txt
