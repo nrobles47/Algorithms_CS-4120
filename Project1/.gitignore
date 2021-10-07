@@ -33,3 +33,7 @@ Sorts_Out.txt
 *.exe
 *.out
 *.app
+
+# Others
+/Debug
+/.vs
