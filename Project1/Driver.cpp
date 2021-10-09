@@ -42,8 +42,9 @@ int main() {
 	fill_random_numbers(random, TEST_SIZE);
 	FileWriter(random, TEST_SIZE, "Random Test Data");
 
+	/************************** BUBBLE SORT *****************************/
 	/**
-	* Bubble Sort Random
+	* Random
 	**/
 	cout << "/**\n  * Bubble Sort Random\n**/\n";
 	// 1000
@@ -56,8 +57,9 @@ int main() {
 	ExecuteSort<BubbleSort>("Bubble Sort Random", 8000, random);
 	cout << endl;
 
+	/************************** INSERTION SORT **************************/
 	/**
-	* Insertion Sort Random
+	* Random
 	**/
 	cout << "/**\n  * Insertion Sort Random\n**/\n";
 	// 1000
@@ -75,12 +77,15 @@ int main() {
 	
 	int* ascending = new int[TEST_SIZE];
 	int* descending = new int[TEST_SIZE];
+	// Dynamically create two arrays filled with random ascending and descending numbers 
 	fill_sorted_numbers(ascending, descending, TEST_SIZE);
+	// Output both arrays to file
 	FileWriter(ascending, TEST_SIZE, "\nAscending Test Data");
 	FileWriter(descending, TEST_SIZE, "\nDescending Test Data");
 
+	/************************** BUBBLE SORT **************************/
 	/**
-	* Bubble Sort Ascending
+	* Ascending
 	**/
 	cout << "/**\n  * Bubble Sort Ascending\n**/\n";
 	// 1000
@@ -94,7 +99,7 @@ int main() {
 	cout << endl;
 
 	/**
-	* Bubble Sort Descending
+	* Descending
 	**/
 	cout << "/**\n  * Bubble Sort Descending\n**/\n";
 	// 1000
@@ -105,6 +110,35 @@ int main() {
 	ExecuteSort<BubbleSort>("Bubble Sort Descending", 4000, descending);
 	// 8000
 	ExecuteSort<BubbleSort>("Bubble Sort Descending", 8000, descending);
+	cout << endl;
+
+	/************************** INSERTION SORT **************************/
+	/**
+	* Ascending
+	**/
+	cout << "/**\n  * Insertion Sort Ascending\n**/\n";
+	// 1000
+	ExecuteSort<InsertionSort>("Insertion Sort Ascending", 1000, ascending);
+	// 2000
+	ExecuteSort<InsertionSort>("Insertion Sort Ascending", 2000, ascending);
+	// 4000
+	ExecuteSort<InsertionSort>("Insertion Sort Ascending", 4000, ascending);
+	// 8000
+	ExecuteSort<InsertionSort>("Insertion Sort Ascending", 8000, ascending);
+	cout << endl;
+
+	/**
+	* Descending
+	**/
+	cout << "/**\n  * Insertion Sort Descending\n**/\n";
+	// 1000
+	ExecuteSort<InsertionSort>("Insertion Sort Descending", 1000, descending);
+	// 2000
+	ExecuteSort<InsertionSort>("Insertion Sort Descending", 2000, descending);
+	// 4000
+	ExecuteSort<InsertionSort>("Insertion Sort Descending", 4000, descending);
+	// 8000
+	ExecuteSort<InsertionSort>("Insertion Sort Descending", 8000, descending);
 	cout << endl;
 
 	// Delete ascending test array for memory
