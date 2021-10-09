@@ -92,6 +92,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <StackReserveSize>4194304</StackReserveSize>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -144,6 +145,7 @@
     <ClCompile Include="Driver.cpp" />
     <ClCompile Include="Driver_Functions\Driver_Functions.cpp" />
     <ClCompile Include="Insertion_Sort\Insertion_Sort.cpp" />
+    <ClCompile Include="Randomized_Quick_Sort\Randomized_Quick_Sort.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Algorithm_Base\Algorithm_Base.h" />
@@ -151,6 +153,7 @@
     <ClInclude Include="Driver.h" />
     <ClInclude Include="Driver_Functions\Driver_Functions.h" />
     <ClInclude Include="Insertion_Sort\Insertion_Sort.h" />
+    <ClInclude Include="Randomized_Quick_Sort\Randomized_Quick_Sort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
