@@ -1,6 +1,6 @@
 #include "Insertion_Sort.h"
 
-void InsertionSort::Sort(int arr[], int n)
+void InsertionSort::Sort(unsigned int arr[], int n)
 {
     int i, key, j;
     for (i = 1; i < n; i++)
@@ -17,7 +17,7 @@ void InsertionSort::Sort(int arr[], int n)
     }
 }
 
-void InsertionSort::Sort(int arr[])
+void InsertionSort::Sort(unsigned int arr[])
 {
 	this->Sort(arr, this->GetTestSize());
 }

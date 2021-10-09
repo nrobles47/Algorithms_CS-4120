@@ -23,12 +23,12 @@ const unsigned int TEST_SIZE = 8000;
 *		makeCopy<int*> : Array we wish to make a copy of and sort
 **/
 template<class T>
-void ExecuteSort(string algName, int testSize, int makeCopy[]) 
+void ExecuteSort(string algName, unsigned int testSize, unsigned int makeCopy[]) 
 {
 	// Instantiate sort object
 	T* algorithm = new T(algName, testSize);
 	// Make copy of array we wish to sort
-	int* testCopy = algorithm->CopyArray(makeCopy);
+	unsigned int* testCopy = algorithm->CopyArray(makeCopy);
 	// Start timer
 	algorithm->SetStartTime();
 	// Sort testCopy
@@ -41,7 +41,7 @@ void ExecuteSort(string algName, int testSize, int makeCopy[])
 
 int main() {
 	// Dynamically create a array filled with random numbers and output to file
-	int* random = new int[TEST_SIZE];
+	unsigned int* random = new unsigned int[TEST_SIZE];
 	fill_random_numbers(random, TEST_SIZE);
 	FileWriter(random, TEST_SIZE, "Random Test Data");
 
@@ -123,8 +123,8 @@ int main() {
 	// Delete random test array for memory
 	delete[] random;
 	
-	int* ascending = new int[TEST_SIZE];
-	int* descending = new int[TEST_SIZE];
+	unsigned int* ascending = new unsigned int[TEST_SIZE];
+	unsigned int* descending = new unsigned int[TEST_SIZE];
 	// Dynamically create two arrays filled with random ascending and descending numbers 
 	fill_sorted_numbers(ascending, descending, TEST_SIZE);
 	// Output both arrays to file

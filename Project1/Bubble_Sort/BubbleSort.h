@@ -7,8 +7,8 @@
 
 class BubbleSort : public Algorithm_Base {
 public:
-	BubbleSort(std::string algName, int testSize) : Algorithm_Base(algName, testSize){};
-	void Sort(int[], int);
-	void Sort(int[]);
-	void Swap(int*, int*);
+	BubbleSort(std::string algName, unsigned int testSize) : Algorithm_Base(algName, testSize){};
+	void Sort(unsigned int[], int);
+	void Sort(unsigned int[]);
+	void Swap(unsigned int*, unsigned int*);
 };

@@ -1,11 +1,11 @@
 #include "MergeSort.h"
 
-void MergeSort::Sort(int arr[], int n)
+void MergeSort::Sort(unsigned int arr[], int n)
 {
     if (n == 0)
         return;
 
-    int* dupArray = new int[n];
+    unsigned int* dupArray = new unsigned int[n];
 
     for (int i = 0; i < n; i++)
         dupArray[i] = arr[i];
@@ -16,13 +16,13 @@ void MergeSort::Sort(int arr[], int n)
         arr[i] = dupArray[i];
 }
 
-void MergeSort::Sort(int arr[])
+void MergeSort::Sort(unsigned int arr[])
 {
     int n = this->GetTestSize();
     this->Sort(arr, n);
 }
 
-void MergeSort::MergeSort3Way(int arr[], int low, int high, int destArr[])
+void MergeSort::MergeSort3Way(unsigned int arr[], int low, int high, unsigned int destArr[])
 {
     if (high - low < 2)
         return;
@@ -40,7 +40,7 @@ void MergeSort::MergeSort3Way(int arr[], int low, int high, int destArr[])
     this->Merge(destArr, low, mid1, mid2, high, arr);
 }
 
-void MergeSort::Merge(int arr[], int low, int mid1, int mid2, int high, int destArr[])
+void MergeSort::Merge(unsigned int arr[], int low, int mid1, int mid2, int high, unsigned int destArr[])
 {
     int i = low, j = mid1, k = mid2, l = low;
 

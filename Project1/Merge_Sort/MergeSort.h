@@ -8,9 +8,9 @@
 class MergeSort : public Algorithm_Base
 {
 public:
-	MergeSort(std::string algName, int testSize) : Algorithm_Base(algName, testSize) {};
-	void Sort(int[], int);
-	void Sort(int[]);
-	void MergeSort3Way(int[], int, int, int[]);
-	void Merge(int[], int, int, int, int, int[]);
+	MergeSort(std::string algName, unsigned int testSize) : Algorithm_Base(algName, testSize) {};
+	void Sort(unsigned int[], int);
+	void Sort(unsigned int[]);
+	void MergeSort3Way(unsigned int[], int, int, unsigned int[]);
+	void Merge(unsigned int[], int, int, int, int, unsigned int[]);
 };
