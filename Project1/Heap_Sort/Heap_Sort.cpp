@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <cstdlib> 
 
-void HeapSort::Sort(int arr[], size_t n)
+void HeapSort::Sort(unsigned int arr[], size_t n)
 {
     size_t unsorted;
 
@@ -18,7 +18,7 @@ void HeapSort::Sort(int arr[], size_t n)
     }
 }
 
-void HeapSort::Sort(int arr[])
+void HeapSort::Sort(unsigned int arr[])
 {
     size_t n = this->GetTestSize();
     this->Sort(arr, n);
@@ -39,7 +39,7 @@ size_t HeapSort::RChild(size_t k)
     return 2 * k + 2;
 }
 
-void HeapSort::MakeHeap(int arr[], size_t n)
+void HeapSort::MakeHeap(unsigned int arr[], size_t n)
 {
     size_t i;  // Index of next element to be added to heap
     size_t k;  // Index of new element as it is being pushed upward through the heap
@@ -56,7 +56,7 @@ void HeapSort::MakeHeap(int arr[], size_t n)
     }
 }
 
-void HeapSort::ReheapifyDown(int arr[], size_t n)
+void HeapSort::ReheapifyDown(unsigned int arr[], size_t n)
 {
     size_t current;          // Index of the node that's moving down
     size_t big_child_index;  // Index of the larger child of the node that's moving down

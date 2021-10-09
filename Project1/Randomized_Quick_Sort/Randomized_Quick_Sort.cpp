@@ -7,7 +7,7 @@
 *		low<int> : starting index
 *		high<int> : ending index
 **/
-void RandomizedQuickSort::Sort(int arr[], int low, int high)
+void RandomizedQuickSort::Sort(unsigned int arr[], int low, int high)
 {
 	if (low < high)
 	{
@@ -17,7 +17,7 @@ void RandomizedQuickSort::Sort(int arr[], int low, int high)
 	}
 }
 
-void RandomizedQuickSort::Sort(int arr[])
+void RandomizedQuickSort::Sort(unsigned int arr[])
 {
 	int n = this->GetTestSize();
 	this->Sort(arr, 0, n - 1);
@@ -30,7 +30,7 @@ void RandomizedQuickSort::Sort(int arr[])
 * * Places all elements smaller than pivot to the left of the pivot
 * * Places all elements greater than pivot to the right of the pivot
 **/
-int RandomizedQuickSort::Partition(int arr[], int low, int high)
+int RandomizedQuickSort::Partition(unsigned int arr[], int low, int high)
 {
 	int pivot = arr[high];
 	int i = (low - 1);
@@ -52,7 +52,7 @@ int RandomizedQuickSort::Partition(int arr[], int low, int high)
 * * Swaps pivot with end element
 * * Calls RandomizedQuickSort::Partition(int arr[], int low, int high)
 **/
-int RandomizedQuickSort::RandPartition(int arr[], int low, int high)
+int RandomizedQuickSort::RandPartition(unsigned int arr[], int low, int high)
 {
 	// Generate a random number r, where low < r < high
 	srand(time(NULL));

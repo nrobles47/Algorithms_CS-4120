@@ -8,7 +8,7 @@
 class InsertionSort : public Algorithm_Base
 {
 public:
-	InsertionSort(std::string algName, int testSize) : Algorithm_Base(algName, testSize) {};
-	void Sort(int[], int);
-	void Sort(int[]);
+	InsertionSort(std::string algName, unsigned int testSize) : Algorithm_Base(algName, testSize) {};
+	void Sort(unsigned int[], int);
+	void Sort(unsigned int[]);
 };

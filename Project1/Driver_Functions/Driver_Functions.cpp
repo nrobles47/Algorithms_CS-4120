@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void FileWriter(int arr[], int ARR_SIZE, string name)
+void FileWriter(unsigned int arr[], unsigned int ARR_SIZE, string name)
 {
 	ofstream outFile;
 	if (outFile) {
@@ -23,7 +23,7 @@ void FileWriter(int arr[], int ARR_SIZE, string name)
 }
 
 
-void fill_random_numbers(int arr[], const unsigned int SIZE)
+void fill_random_numbers(unsigned int arr[], const unsigned int SIZE)
 {
 	// Pre:  SIZE is no more than a million, arr has been declared to be
 	//       an array of at least SIZE elements.
@@ -36,7 +36,7 @@ void fill_random_numbers(int arr[], const unsigned int SIZE)
 	}
 }
 
-void fill_sorted_numbers(int asc [], int dsc [], const unsigned int SIZE)
+void fill_sorted_numbers(unsigned int asc [], unsigned int dsc [], const unsigned int SIZE)
 {
 	// Pre:  SIZE is no more than a million, and asc and dsc have been declared
 	//       to be arrays of at least SIZE elements.

@@ -1,6 +1,6 @@
 #include "BubbleSort.h"
 
-void BubbleSort::Sort(int arr[], int n)
+void BubbleSort::Sort(unsigned int arr[], int n)
 {
     int i, j;
     bool isSwapped;
@@ -21,12 +21,12 @@ void BubbleSort::Sort(int arr[], int n)
     }
 }
 
-void BubbleSort::Sort(int arr[])
+void BubbleSort::Sort(unsigned int arr[])
 {
     this->Sort(arr, this->GetTestSize());
 }
 
-void BubbleSort::Swap(int* xp, int* yp)
+void BubbleSort::Swap(unsigned int* xp, unsigned int* yp)
 {
     int temp = *xp;
     *xp = *yp;

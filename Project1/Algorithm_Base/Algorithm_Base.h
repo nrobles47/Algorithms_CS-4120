@@ -12,7 +12,7 @@ public:
 	* * Accepts algName<string> so program knows that algorithm it is running
 	* * Sets comparisons<int> to 0
 	**/
-	Algorithm_Base(std::string algName, int testSize) 
+	Algorithm_Base(std::string algName, unsigned int testSize) 
 	{ 
 		this->_testSize = testSize;
 		this->_comparisons = 0;
@@ -40,7 +40,7 @@ public:
 	{
 		return this->_testSize;
 	};
-	int* CopyArray(int[]);
+	unsigned int* CopyArray(unsigned int[]);
 	/**
 	* SetStartTime and SetStopTime
 	* * These two methods save the current time the method was called
@@ -52,7 +52,7 @@ public:
 private:
 	std::string _algName; // Name of algorithm currently running
 	int _comparisons; // Counter for comparisons
-	int _testSize; // Size of array we are sorting
+	unsigned int _testSize; // Size of array we are sorting
 	std::chrono::time_point<std::chrono::steady_clock> _startTime;
 	std::chrono::time_point<std::chrono::steady_clock> _stopTime;
 };
