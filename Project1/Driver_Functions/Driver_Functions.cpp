@@ -22,6 +22,7 @@ void FileWriter(int arr[], int ARR_SIZE, string name)
 	outFile.close();
 }
 
+
 void fill_random_numbers(int arr[], const unsigned int SIZE)
 {
 	// Pre:  SIZE is no more than a million, arr has been declared to be

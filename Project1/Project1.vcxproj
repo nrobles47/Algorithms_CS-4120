@@ -139,11 +139,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Algorithm_Base\Algorithm_Base.cpp" />
+    <ClCompile Include="Bubble_Sort\BubbleSort.cpp" />
     <ClCompile Include="Driver.cpp" />
     <ClCompile Include="Driver_Functions\Driver_Functions.cpp" />
+    <ClCompile Include="Insertion_Sort\Insertion_Sort.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Algorithm_Base\Algorithm_Base.h" />
+    <ClInclude Include="Bubble_Sort\BubbleSort.h" />
+    <ClInclude Include="Driver.h" />
     <ClInclude Include="Driver_Functions\Driver_Functions.h" />
+    <ClInclude Include="Insertion_Sort\Insertion_Sort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
