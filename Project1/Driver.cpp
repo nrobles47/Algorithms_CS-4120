@@ -7,6 +7,7 @@
 #include "Bubble_Sort/BubbleSort.h"
 #include "Insertion_Sort/Insertion_Sort.h"
 #include "Randomized_Quick_Sort/Randomized_Quick_Sort.h"
+#include "Heap_Sort/Heap_Sort.h"
 #include "Driver.h"
 
 using namespace std;
@@ -86,6 +87,21 @@ int main() {
 	ExecuteSort<RandomizedQuickSort>("Randomized Quick Sort Random", 4000, random);
 	// 8000
 	ExecuteSort<RandomizedQuickSort>("Randomized Quick Sort Random", 8000, random);
+	cout << endl;
+
+	/************************** HEAP SORT *****************************/
+	/**
+	* Random
+	**/
+	cout << "/**\n  * Heap Sort Random\n**/\n";
+	// 1000
+	ExecuteSort<HeapSort>("Heap Sort Random", 1000, random);
+	// 2000
+	ExecuteSort<HeapSort>("Heap Sort Random", 2000, random);
+	// 4000
+	ExecuteSort<HeapSort>("Heap Sort Random", 4000, random);
+	// 8000
+	ExecuteSort<HeapSort>("Heap Sort Random", 8000, random);
 	cout << endl;
 
 	// Delete random test array for memory
@@ -184,6 +200,35 @@ int main() {
 	ExecuteSort<RandomizedQuickSort>("Randomized Quick Sort Descending", 4000, descending);
 	// 8000
 	ExecuteSort<RandomizedQuickSort>("Randomized Quick Sort Descending", 8000, descending);
+	cout << endl;
+
+	/************************** HEAP SORT **************************/
+/**
+* Ascending
+**/
+	cout << "/**\n  * Heap Sort Ascending\n**/\n";
+	// 1000
+	ExecuteSort<HeapSort>("Heap Sort Ascending", 1000, ascending);
+	// 2000
+	ExecuteSort<HeapSort>("Heap Sort Ascending", 2000, ascending);
+	// 4000
+	ExecuteSort<HeapSort>("Heap Sort Ascending", 4000, ascending);
+	// 8000
+	ExecuteSort<HeapSort>("Heap Sort Ascending", 8000, ascending);
+	cout << endl;
+
+	/**
+	* Descending
+	**/
+	cout << "/**\n  * Heap Sort Descending\n**/\n";
+	// 1000
+	ExecuteSort<HeapSort>("Heap Sort Descending", 1000, descending);
+	// 2000
+	ExecuteSort<HeapSort>("Heap Sort Descending", 2000, descending);
+	// 4000
+	ExecuteSort<HeapSort>("Heap Sort Descending", 4000, descending);
+	// 8000
+	ExecuteSort<HeapSort>("Heap Sort Descending", 8000, descending);
 	cout << endl;
 
 	// Delete ascending test array for memory
