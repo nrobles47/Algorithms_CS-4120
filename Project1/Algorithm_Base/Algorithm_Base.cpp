@@ -9,9 +9,9 @@ bool Algorithm_Base::IncrementComparisons()
 	return true;
 }
 
-int* Algorithm_Base::CopyArray(int arr[])
+unsigned int* Algorithm_Base::CopyArray(unsigned int arr[])
 {
-	int* copy = new int[this->_testSize];
+	unsigned int* copy = new unsigned int[this->_testSize];
 	for (int i = 0; i < this->_testSize; i++) {
 		copy[i] = arr[i];
 	}
