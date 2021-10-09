@@ -146,6 +146,7 @@
     <ClCompile Include="Driver_Functions\Driver_Functions.cpp" />
     <ClCompile Include="Heap_Sort\Heap_Sort.cpp" />
     <ClCompile Include="Insertion_Sort\Insertion_Sort.cpp" />
+    <ClCompile Include="Merge_Sort\MergeSort.cpp" />
     <ClCompile Include="Randomized_Quick_Sort\Randomized_Quick_Sort.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +156,7 @@
     <ClInclude Include="Driver_Functions\Driver_Functions.h" />
     <ClInclude Include="Heap_Sort\Heap_Sort.h" />
     <ClInclude Include="Insertion_Sort\Insertion_Sort.h" />
+    <ClInclude Include="Merge_Sort\MergeSort.h" />
     <ClInclude Include="Randomized_Quick_Sort\Randomized_Quick_Sort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

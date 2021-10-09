@@ -36,6 +36,9 @@
     <ClCompile Include="Heap_Sort\Heap_Sort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Merge_Sort\MergeSort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Driver_Functions\Driver_Functions.h">
@@ -57,6 +60,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Heap_Sort\Heap_Sort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Merge_Sort\MergeSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
