@@ -144,6 +144,7 @@
     <ClCompile Include="Bubble_Sort\BubbleSort.cpp" />
     <ClCompile Include="Driver.cpp" />
     <ClCompile Include="Driver_Functions\Driver_Functions.cpp" />
+    <ClCompile Include="Heap_Sort\Heap_Sort.cpp" />
     <ClCompile Include="Insertion_Sort\Insertion_Sort.cpp" />
     <ClCompile Include="Randomized_Quick_Sort\Randomized_Quick_Sort.cpp" />
   </ItemGroup>
@@ -152,6 +153,7 @@
     <ClInclude Include="Bubble_Sort\BubbleSort.h" />
     <ClInclude Include="Driver.h" />
     <ClInclude Include="Driver_Functions\Driver_Functions.h" />
+    <ClInclude Include="Heap_Sort\Heap_Sort.h" />
     <ClInclude Include="Insertion_Sort\Insertion_Sort.h" />
     <ClInclude Include="Randomized_Quick_Sort\Randomized_Quick_Sort.h" />
   </ItemGroup>

@@ -33,6 +33,9 @@
     <ClCompile Include="Randomized_Quick_Sort\Randomized_Quick_Sort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Heap_Sort\Heap_Sort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Driver_Functions\Driver_Functions.h">
@@ -51,6 +54,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Randomized_Quick_Sort\Randomized_Quick_Sort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Heap_Sort\Heap_Sort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
