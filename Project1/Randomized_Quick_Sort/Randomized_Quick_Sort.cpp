@@ -19,8 +19,7 @@ void RandomizedQuickSort::Sort(unsigned int arr[], int low, int high)
 
 void RandomizedQuickSort::Sort(unsigned int arr[])
 {
-	int n = this->GetTestSize();
-	this->Sort(arr, 0, n - 1);
+	this->Sort(arr, 0, this->GetTestSize() - 1);
 }
 
 /**

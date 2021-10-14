@@ -18,8 +18,7 @@ void MergeSort::Sort(unsigned int arr[], int n)
 
 void MergeSort::Sort(unsigned int arr[])
 {
-    int n = this->GetTestSize();
-    this->Sort(arr, n);
+    this->Sort(arr, this->GetTestSize());
 }
 
 void MergeSort::MergeSort3Way(unsigned int arr[], int low, int high, unsigned int destArr[])

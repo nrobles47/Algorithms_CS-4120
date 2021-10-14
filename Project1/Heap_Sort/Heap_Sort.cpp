@@ -20,8 +20,7 @@ void HeapSort::Sort(unsigned int arr[], size_t n)
 
 void HeapSort::Sort(unsigned int arr[])
 {
-    size_t n = this->GetTestSize();
-    this->Sort(arr, n);
+    this->Sort(arr, this->GetTestSize());
 }
 
 size_t HeapSort::Parent(size_t k)
