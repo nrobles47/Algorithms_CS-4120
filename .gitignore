@@ -33,5 +33,7 @@
 
 # Others
 /Debug
-/.vs
+*.vs
 /*.txt
+*.pdf
+*.zip
