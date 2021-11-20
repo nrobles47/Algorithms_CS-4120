@@ -3,10 +3,10 @@
 
 using namespace std;
 
-class RecursiveFibonacci : public Fibonacci 
+class MTDFibonacci : public Fibonacci
 {
 public:
-	RecursiveFibonacci() : Fibonacci("Recursive Fibonacci") {};
+	MTDFibonacci() : Fibonacci("Memoized Top Down Fibonacci") {};
 
 	/**
 	* RunAlgorithm()
@@ -16,9 +16,9 @@ public:
 	void RunAlgorithm();
 
 	/**
-	* RecFib(int n)
-	* Input: receives n from _inputArray
+	* MTDF(int n, int* cache)
+	* Input: receives n from _inputArray and initialized cache
 	* Output: nth value from fibonacci sequence
 	*/
-	int RecFib(int n);
+	int MTDF(int n, int* cache);
 };

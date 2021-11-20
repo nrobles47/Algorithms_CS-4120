@@ -141,10 +141,12 @@
   <ItemGroup>
     <ClCompile Include="Driver.cpp" />
     <ClCompile Include="Fibonacci\Fibonacci.cpp" />
+    <ClCompile Include="Fibonacci\Memoized_Top_Down\Memoized_Top_Down_Fibonacci.cpp" />
     <ClCompile Include="Fibonacci\Recursive\RecursiveFibonacci.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Fibonacci\Fibonacci.h" />
+    <ClInclude Include="Fibonacci\Memoized_Top_Down\Memoized_Top_Down_Fibonacci.h" />
     <ClInclude Include="Fibonacci\Recursive\RecursiveFibonacci.h" />
   </ItemGroup>
   <ItemGroup>
