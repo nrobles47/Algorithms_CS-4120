@@ -4,7 +4,9 @@
 
 using namespace std;
 
-int MTDFibonacci::MTDF(int n, int* cache)
+size_t cache[100];
+
+int MTDFibonacci::MTDF(int n)
 {
     int result = 0;
     if (n <= 1)
@@ -13,9 +15,9 @@ int MTDFibonacci::MTDF(int n, int* cache)
     }
     else
     {
-        if (cache[n] == -1)
+        if (cache[n] == 0)
         {
-            result = MTDF(n - 1, cache) + MTDF(n - 2, cache);
+            result = MTDF(n - 1) + MTDF(n - 2);
             cache[n] = result;
         }
         else {
@@ -32,14 +34,12 @@ void MTDFibonacci::RunAlgorithm()
         this->SetStartTime(i);
 
         int n = this->GetInputArray(i);
-        int* temp = new int[n];
         for (int j = 0; j < n; j++)
         {
-            j <= 1 ? temp[j] = 1 : temp[j] = -1;
+            j <= 1 ? cache[j] = 1 : cache[j] = 0;
         }
 
-        this->SetOutputArray(i, MTDF(n-1, temp));
+        this->SetOutputArray(i, MTDF(n-1));
         this->SetStopTime(i);
-        delete[] temp;
     }
 }

@@ -3,10 +3,18 @@
 
 using namespace std;
 
-class RecursiveFibonacci : public Fibonacci 
+class BottomUpFib : public Fibonacci
 {
 public:
-	RecursiveFibonacci() : Fibonacci("Recursive Fibonacci") {};
+	BottomUpFib() : Fibonacci("Bottom Up Fibonacci") {};
+
+	/**
+	* Bottom Up Fibonacci implementation
+	* BUF(int n)
+	* INPUT: takes an integer n
+	* OUTPUT: returns the nth number from the fibonacci sequence.
+	*/
+	int BUF(int n);
 
 	/**
 	* RunAlgorithm()
@@ -17,12 +25,4 @@ public:
 	* * Recording the time the method stopped.
 	*/
 	void RunAlgorithm();
-
-	/**
-	* Recursive Fibonacci implementation
-	* RecFib(int n)
-	* INPUT: takes an integer n
-	* OOUTPUT: returns the nth value from the  fibonacci sequence
-	*/
-	int RecFib(int n);
 };

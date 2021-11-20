@@ -10,15 +10,19 @@ public:
 
 	/**
 	* RunAlgorithm()
-	* Input: N/A
-	* Output: Returns the nth number in the Fibonacci sequence
+	* This method is in charge of the following.
+	* * Recording start time of method.
+	* * Calling the chosen implementation of the fibonacci sequence.
+	* * Storing returned value in the output array.
+	* * Recording the time the method stopped.
 	*/
 	void RunAlgorithm();
 
 	/**
+	* Top Down Fibonacci Implementation with Memoization
 	* MTDF(int n, int* cache)
-	* Input: receives n from _inputArray and initialized cache
-	* Output: nth value from fibonacci sequence
+	* INPUT: takes an integer n
+	* OUTPUT: returns the nth number from the fibonacci sequence.
 	*/
-	int MTDF(int n, int* cache);
+	int MTDF(int n);
 };
