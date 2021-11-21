@@ -8,9 +8,6 @@ using namespace std;
 class MCM
 {
 public:
-	/**
-	* Constructor
-	*/
 	MCM(std::string algName)
 	{
 		this->_algName = algName;

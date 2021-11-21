@@ -112,7 +112,6 @@ void RecursiveMCM::FileWriter(size_t input[], int SIZE, int iteration, size_t ou
 	outFile.open("MatrixChainMultiplication/MCM_Output.txt", ios::app);
 	if (outFile.is_open())
 	{
-		/* If you wish to run this multiple times, you must clear the output in MCM_Paren_Output.txt so the correct parens are found */
 		std::ifstream parenFile;
 		std::string parens;
 		parenFile.open("MatrixChainMultiplication/MCM_Paren_Output.txt");
@@ -124,18 +123,6 @@ void RecursiveMCM::FileWriter(size_t input[], int SIZE, int iteration, size_t ou
 				getline(parenFile, parens);
 				iterator++;
 			}
-		}
-
-		int fileW = parens.size() + 10;
-
-		if (iteration == 0)
-		{
-			outFile << endl << this->GetAlgName() << endl;
-			outFile << left << setw(30) << setfill(' ') << "Input"
-				<< left << setw(20) << setfill(' ') << "Scalar Mults"
-				<< left << setw(fileW) << setfill(' ') << "Optimal Parens"
-				<< left << setw(15) << setfill(' ') << "Nanoseconds"
-				<< endl;
 		}
 
 		std::string temp;
@@ -150,11 +137,25 @@ void RecursiveMCM::FileWriter(size_t input[], int SIZE, int iteration, size_t ou
 			}
 		}
 
-		outFile << left << setw(30) << setfill(' ') << temp
-			<< left << setw(20) << setfill(' ') << output[iteration]
-			<< left << setw(fileW) << setfill(' ') << parens
+		int setInputW = temp.size() + 10;
+		int setOutputW = sizeof(output) + 10;
+		int setParensW = parens.size() + 10;
+
+		if (iteration == 0)
+		{
+			outFile << endl << this->GetAlgName() << endl;
+			outFile << left << setw(setInputW) << setfill(' ') << "Input"
+				<< left << setw(setOutputW) << setfill(' ') << "Scalar Mults"
+				<< left << setw(setParensW) << setfill(' ') << "Optimal Parens"
+				<< left << setw(15) << setfill(' ') << "Microseconds"
+				<< endl;
+		}
+
+		outFile << left << setw(setInputW) << setfill(' ') << temp
+			<< left << setw(setOutputW) << setfill(' ') << output[iteration]
+			<< left << setw(setParensW) << setfill(' ') << parens
 			<< left << setw(15) << setfill(' ')
-			<< std::chrono::duration_cast<std::chrono::nanoseconds>(stop[iteration] - start[iteration]).count()
+			<< std::chrono::duration_cast<std::chrono::microseconds>(stop[iteration] - start[iteration]).count()
 			<< endl;
 		parenFile.close();
 	}
