@@ -36,6 +36,12 @@
     <ClCompile Include="MatrixChainMultiplication\Recursive\RecursiveMCM.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MatrixChainMultiplication\Bottom_Up\Bottom_Up_MCM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MatrixChainMultiplication\Memoized_Top_Down\Memoized_Top_Down_MCM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Fibonacci\Fibonacci.h">
@@ -54,6 +60,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MatrixChainMultiplication\Recursive\RecursiveMCM.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MatrixChainMultiplication\Bottom_Up\Bottom_Up_MCM.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MatrixChainMultiplication\Memoized_Top_Down\Memoized_Top_Down_MCM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -145,6 +145,8 @@
     <ClCompile Include="Fibonacci\Memoized_Top_Down\Memoized_Top_Down_Fibonacci.cpp" />
     <ClCompile Include="Fibonacci\Recursive\RecursiveFibonacci.cpp" />
     <ClCompile Include="MatrixChainMultiplication\MCM.cpp" />
+    <ClCompile Include="MatrixChainMultiplication\Bottom_Up\Bottom_Up_MCM.cpp" />
+    <ClCompile Include="MatrixChainMultiplication\Memoized_Top_Down\Memoized_Top_Down_MCM.cpp" />
     <ClCompile Include="MatrixChainMultiplication\Recursive\RecursiveMCM.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +155,8 @@
     <ClInclude Include="Fibonacci\Memoized_Top_Down\Memoized_Top_Down_Fibonacci.h" />
     <ClInclude Include="Fibonacci\Recursive\RecursiveFibonacci.h" />
     <ClInclude Include="MatrixChainMultiplication\MCM.h" />
+    <ClInclude Include="MatrixChainMultiplication\Bottom_Up\Bottom_Up_MCM.h" />
+    <ClInclude Include="MatrixChainMultiplication\Memoized_Top_Down\Memoized_Top_Down_MCM.h" />
     <ClInclude Include="MatrixChainMultiplication\Recursive\RecursiveMCM.h" />
   </ItemGroup>
   <ItemGroup>
