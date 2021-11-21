@@ -1,8 +1,24 @@
 
 Recursive Fibonacci
 Input     Output    Microseconds
+10        55        10             
+11        89        16             
+12        144       33             
+13        233       53             
+14        377       58             
+
+Memoized Top Down Fibonacci
+Input     Output    Microseconds
+10        89        2              
+11        144       2              
+12        233       2              
+13        377       3              
+14        610       2              
+
+Bottom Up Fibonacci
+Input     Output    Microseconds
 10        55        2              
-12        144       6              
-14        377       15             
-16        987       40             
-18        2584      83             
+11        89        4              
+12        144       2              
+13        233       2              
+14        377       2              
