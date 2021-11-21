@@ -1,30 +1,24 @@
 
 Recursive Fibonacci
-Input	Output	Nanoseconds
-1		1		500
-2		1		200
-3		2		200
-4		3		200
-5		5		300
-6		8		500
-7		13		600
+Input     Output    Microseconds
+10        55        10             
+11        89        16             
+12        144       33             
+13        233       53             
+14        377       58             
 
 Memoized Top Down Fibonacci
-Input	Output	Nanoseconds
-1		1		400
-2		1		100
-3		2		300
-4		3		200
-5		5		200
-6		8		400
-7		13		400
+Input     Output    Microseconds
+10        89        2              
+11        144       2              
+12        233       2              
+13        377       3              
+14        610       2              
 
 Bottom Up Fibonacci
-Input	Output	Nanoseconds
-1		1		900
-2		1		400
-3		2		700
-4		3		500
-5		5		400
-6		8		300
-7		13		300
+Input     Output    Microseconds
+10        55        2              
+11        89        4              
+12        144       2              
+13        233       2              
+14        377       2              

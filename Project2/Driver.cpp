@@ -19,26 +19,29 @@ using namespace std;
 int main() 
 {
 	/* FIBONACCI SEQUENCE */
-	//std::ofstream outFile;
-	//outFile.open("Fibonacci/Fibonacci_Output.txt", ios::trunc);
-	//outFile.close();
+	std::ofstream outFile1;
+	outFile1.open("Fibonacci/Fibonacci_Output.txt", ios::trunc);
+	outFile1.close();
+	
 	// Recursive
-	//RecursiveFibonacci* RF = new RecursiveFibonacci();
-	//RF->RunAlgorithm();
-	//delete RF;
-	//// Memoized Top Down
-	//MTDFibonacci* TD = new MTDFibonacci();
-	//TD->RunAlgorithm();
-	//delete TD;
-	//// Bottom Up
-	//BottomUpFib* BU = new BottomUpFib();
-	//BU->RunAlgorithm();
-	//delete BU;
+	RecursiveFibonacci* RF = new RecursiveFibonacci();
+	RF->RunAlgorithm();
+	delete RF;
+	
+	// Memoized Top Down
+	MTDFibonacci* TD = new MTDFibonacci();
+	TD->RunAlgorithm();
+	delete TD;
+	
+	// Bottom Up
+	BottomUpFib* BU = new BottomUpFib();
+	BU->RunAlgorithm();
+	delete BU;
 	
 	/* Matrix Chain Multiplication */
-	std::ofstream outFile;
-	outFile.open("MatrixChainMultiplication/MCM_Output.txt", ios::trunc);
-	outFile.close();
+	std::ofstream outFile2;
+	outFile2.open("MatrixChainMultiplication/MCM_Output.txt", ios::trunc);
+	outFile2.close();
 	
 	// Recursive
 	RecursiveMCM* RM = new RecursiveMCM();
