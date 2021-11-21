@@ -37,7 +37,8 @@ void Fibonacci::FileWriter()
 				<< std::chrono::duration_cast<std::chrono::nanoseconds>(this->_stopTime[i] - this->_startTime[i]).count() << endl;
 		}
 	}
-	else {
+	else 
+	{
 		cerr << "Cannot create or find file!" << endl;
 	}
 	outFile.close();
