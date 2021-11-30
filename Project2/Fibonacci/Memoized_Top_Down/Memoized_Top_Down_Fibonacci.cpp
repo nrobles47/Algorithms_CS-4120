@@ -9,27 +9,20 @@
 
 using namespace std;
 
-size_t cache[100];
-
-int MTDFibonacci::MTDF(int n)
+unsigned long long MTDFibonacci::MTDF(int n, unsigned long long cache[])
 {
-    int result = 0;
-    if (n <= 1)
+    if (cache[n] == 0)
     {
-        result = cache[n];
-    }
-    else
-    {
-        if (cache[n] == 0)
+        if (n <= 1)
         {
-            result = MTDF(n - 1) + MTDF(n - 2);
-            cache[n] = result;
+            cache[n] = n;
         }
-        else {
-            return result = cache[n];
+        else
+        {
+            cache[n] = MTDF(n - 1, cache) + MTDF(n - 2, cache);
         }
     }
-    return result;
+    return cache[n];
 }
 
 void MTDFibonacci::RunAlgorithm()
@@ -43,29 +36,31 @@ void MTDFibonacci::RunAlgorithm()
         getline(inFile, temp);
         stringstream line(temp);
         size_t* inputArray = new size_t[temp.size()];
-        size_t* outputArray = new size_t[temp.size()];
+        unsigned long long* outputArray = new unsigned long long[temp.size()];
         std::chrono::time_point<std::chrono::steady_clock>* startTime = new std::chrono::time_point<std::chrono::steady_clock>[temp.size()];
         std::chrono::time_point<std::chrono::steady_clock>* stopTime = new std::chrono::time_point<std::chrono::steady_clock>[temp.size()];
 
         int x, j = 0;
         while (line >> x)
         {
+            unsigned long long* cache = new unsigned long long[x+1];
             inputArray[j] = x;
             startTime[j] = std::chrono::high_resolution_clock::now();
-            for (int j = 0; j < x; j++)
+            for (int i = 0; i < x+1; i++)
             {
-                j <= 1 ? cache[j] = 1 : cache[j] = 0;
+                cache[i] = 0;
             }
-            outputArray[j] = this->MTDF(inputArray[j]);
+            outputArray[j] = this->MTDF(inputArray[j], cache);
             stopTime[j] = std::chrono::high_resolution_clock::now();
             this->FileWriter(j, inputArray, outputArray, startTime, stopTime);
+            delete[] cache;
             j++;
         }
         delete[] inputArray, outputArray, startTime, stopTime;
     }
 }
 
-void MTDFibonacci::FileWriter(int iteration, size_t input[], size_t output[], std::chrono::time_point<std::chrono::steady_clock> start[], std::chrono::time_point<std::chrono::steady_clock> stop[])
+void MTDFibonacci::FileWriter(int iteration, size_t input[], unsigned long long output[], std::chrono::time_point<std::chrono::steady_clock> start[], std::chrono::time_point<std::chrono::steady_clock> stop[])
 {
     std::ofstream outFile;
     outFile.open("Fibonacci/Fibonacci_Output.txt", ios::app);
@@ -75,16 +70,16 @@ void MTDFibonacci::FileWriter(int iteration, size_t input[], size_t output[], st
         if (iteration == 0)
         {
             outFile << endl << this->GetAlgName() << endl;
-            outFile << left << setw(10) << setfill(' ') << "Input"
-                << left << setw(10) << setfill(' ') << "Output"
-                << left << setw(10) << setfill(' ') << "Microseconds"
+            outFile << left << setw(30) << setfill(' ') << "Input"
+                << left << setw(30) << setfill(' ') << "Output"
+                << left << setw(30) << setfill(' ') << "Nanoseconds"
                 << endl;
         }
 
-        outFile << left << setw(10) << setfill(' ') << input[iteration]
-            << left << setw(10) << setfill(' ') << output[iteration]
-            << left << setw(15) << setfill(' ')
-            << std::chrono::duration_cast<std::chrono::microseconds>(stop[iteration] - start[iteration]).count()
+        outFile << left << setw(30) << setfill(' ') << input[iteration]
+            << left << setw(30) << setfill(' ') << output[iteration]
+            << left << setw(30) << setfill(' ')
+            << std::chrono::duration_cast<std::chrono::nanoseconds>(stop[iteration] - start[iteration]).count()
             << endl;
     }
     else {

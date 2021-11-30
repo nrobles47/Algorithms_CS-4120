@@ -8,9 +8,9 @@ class MTDFibonacci : public Fibonacci
 public:
 	MTDFibonacci() : Fibonacci("Memoized Top Down Fibonacci") {};
 
-	int MTDF(int n);
+	unsigned long long MTDF(int n, unsigned long long cache[]);
 
 	void RunAlgorithm();
 
-	void FileWriter(int iteration, size_t input[], size_t output[], std::chrono::time_point<std::chrono::steady_clock> start[], std::chrono::time_point<std::chrono::steady_clock> stop[]);
+	void FileWriter(int iteration, size_t input[], unsigned long long output[], std::chrono::time_point<std::chrono::steady_clock> start[], std::chrono::time_point<std::chrono::steady_clock> stop[]);
 };

@@ -23,10 +23,10 @@ int main()
 	outFile1.open("Fibonacci/Fibonacci_Output.txt", ios::trunc);
 	outFile1.close();
 	
-	// Recursive
-	RecursiveFibonacci* RF = new RecursiveFibonacci();
-	RF->RunAlgorithm();
-	delete RF;
+	//// Recursive
+	//RecursiveFibonacci* RF = new RecursiveFibonacci();
+	//RF->RunAlgorithm();
+	//delete RF;
 	
 	// Memoized Top Down
 	MTDFibonacci* TD = new MTDFibonacci();

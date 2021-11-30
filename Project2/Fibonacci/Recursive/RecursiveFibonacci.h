@@ -8,9 +8,9 @@ class RecursiveFibonacci : public Fibonacci
 public:
 	RecursiveFibonacci() : Fibonacci("Recursive Fibonacci") {};
 
-	int RecFib(int n);
+	unsigned long long RecFib(unsigned long long n);
 
 	void RunAlgorithm();
 
-	void FileWriter(int iteration, size_t input[], size_t output[], std::chrono::time_point<std::chrono::steady_clock> start[], std::chrono::time_point<std::chrono::steady_clock> stop[]);
+	void FileWriter(int iteration, size_t input[], unsigned long long output[], std::chrono::time_point<std::chrono::steady_clock> start[], std::chrono::time_point<std::chrono::steady_clock> stop[]);
 };

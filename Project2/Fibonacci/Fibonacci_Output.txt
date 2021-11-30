@@ -1,24 +1,21 @@
 
 Recursive Fibonacci
-Input     Output    Microseconds
-10        55        10             
-11        89        16             
-12        144       33             
-13        233       53             
-14        377       58             
+Input                         Output                        Microseconds                  
+15                            610                           22                            
+25                            75025                         2675                          
+35                            9227465                       331215                        
+55                            139583862445                  5002468708    
 
 Memoized Top Down Fibonacci
-Input     Output    Microseconds
-10        89        2              
-11        144       2              
-12        233       2              
-13        377       3              
-14        610       2              
+Input                         Output                        Nanoseconds                   
+15                            610                           800                           
+25                            75025                         2200                          
+35                            9227465                       2600                          
+55                            139583862445                  21200                         
 
 Bottom Up Fibonacci
-Input     Output    Microseconds
-10        55        2              
-11        89        4              
-12        144       2              
-13        233       2              
-14        377       2              
+Input                         Output                        Nanoseconds                   
+15                            610                           700                           
+25                            75025                         1300                          
+35                            9227465                       1400                          
+55                            139583862445                  1500                          

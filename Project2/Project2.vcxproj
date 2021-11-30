@@ -162,7 +162,9 @@
   <ItemGroup>
     <Text Include="Fibonacci\Fibonacci_Input.txt" />
     <Text Include="Fibonacci\Fibonacci_Output.txt" />
+    <Text Include="MatrixChainMultiplication\MCM_Input.txt" />
     <Text Include="MatrixChainMultiplication\MCM_Output.txt" />
+    <Text Include="MatrixChainMultiplication\MCM_Paren_Output.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

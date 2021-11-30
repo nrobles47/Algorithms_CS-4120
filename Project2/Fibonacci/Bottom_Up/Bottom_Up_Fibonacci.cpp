@@ -6,9 +6,9 @@
 #include <string>
 #include <sstream>
 
-int BottomUpFib::BUF(int n)
+unsigned long long BottomUpFib::BUF(int n)
 {
-    size_t* fibArray = new size_t[n + 1];
+    unsigned long long* fibArray = new unsigned long long[n + 1];
     fibArray[0] = 0;
     fibArray[1] = 1;
 
@@ -29,7 +29,7 @@ void BottomUpFib::RunAlgorithm()
         getline(inFile, temp);
         stringstream line(temp);
         size_t* inputArray = new size_t[temp.size()];
-        size_t* outputArray = new size_t[temp.size()];
+        unsigned long long* outputArray = new unsigned long long[temp.size()];
         std::chrono::time_point<std::chrono::steady_clock>* startTime = new std::chrono::time_point<std::chrono::steady_clock>[temp.size()];
         std::chrono::time_point<std::chrono::steady_clock>* stopTime = new std::chrono::time_point<std::chrono::steady_clock>[temp.size()];
 
@@ -47,7 +47,7 @@ void BottomUpFib::RunAlgorithm()
     }
 }
 
-void BottomUpFib::FileWriter(int iteration, size_t input[], size_t output[], std::chrono::time_point<std::chrono::steady_clock> start[], std::chrono::time_point<std::chrono::steady_clock> stop[])
+void BottomUpFib::FileWriter(int iteration, size_t input[], unsigned long long output[], std::chrono::time_point<std::chrono::steady_clock> start[], std::chrono::time_point<std::chrono::steady_clock> stop[])
 {
     std::ofstream outFile;
     outFile.open("Fibonacci/Fibonacci_Output.txt", ios::app);
@@ -57,16 +57,16 @@ void BottomUpFib::FileWriter(int iteration, size_t input[], size_t output[], std
         if (iteration == 0)
         {
             outFile << endl << this->GetAlgName() << endl;
-            outFile << left << setw(10) << setfill(' ') << "Input"
-                << left << setw(10) << setfill(' ') << "Output"
-                << left << setw(10) << setfill(' ') << "Microseconds"
+            outFile << left << setw(30) << setfill(' ') << "Input"
+                << left << setw(30) << setfill(' ') << "Output"
+                << left << setw(30) << setfill(' ') << "Nanoseconds"
                 << endl;
         }
 
-        outFile << left << setw(10) << setfill(' ') << input[iteration]
-            << left << setw(10) << setfill(' ') << output[iteration]
-            << left << setw(15) << setfill(' ')
-            << std::chrono::duration_cast<std::chrono::microseconds>(stop[iteration] - start[iteration]).count()
+        outFile << left << setw(30) << setfill(' ') << input[iteration]
+            << left << setw(30) << setfill(' ') << output[iteration]
+            << left << setw(30) << setfill(' ')
+            << std::chrono::duration_cast<std::chrono::nanoseconds>(stop[iteration] - start[iteration]).count()
             << endl;
     }
     else {

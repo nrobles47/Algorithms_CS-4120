@@ -8,7 +8,7 @@
 
 using namespace std;
 
-int RecursiveFibonacci::RecFib(int n)
+unsigned long long RecursiveFibonacci::RecFib(unsigned long long n)
 {
     if (n <= 1)
         return n;
@@ -26,7 +26,7 @@ void RecursiveFibonacci::RunAlgorithm()
         getline(inFile, temp);
         stringstream line(temp);
         size_t* inputArray = new size_t[temp.size()];
-        size_t* outputArray = new size_t[temp.size()];
+        unsigned long long* outputArray = new unsigned long long[temp.size()];
         std::chrono::time_point<std::chrono::steady_clock>* startTime = new std::chrono::time_point<std::chrono::steady_clock>[temp.size()];
         std::chrono::time_point<std::chrono::steady_clock>* stopTime = new std::chrono::time_point<std::chrono::steady_clock>[temp.size()];
 
@@ -45,7 +45,7 @@ void RecursiveFibonacci::RunAlgorithm()
     }
 }
 
-void RecursiveFibonacci::FileWriter(int iteration, size_t input[], size_t output[], std::chrono::time_point<std::chrono::steady_clock> start[], std::chrono::time_point<std::chrono::steady_clock> stop[])
+void RecursiveFibonacci::FileWriter(int iteration, size_t input[], unsigned long long output[], std::chrono::time_point<std::chrono::steady_clock> start[], std::chrono::time_point<std::chrono::steady_clock> stop[])
 {
     std::ofstream outFile;
     outFile.open("Fibonacci/Fibonacci_Output.txt", ios::app);
@@ -55,15 +55,15 @@ void RecursiveFibonacci::FileWriter(int iteration, size_t input[], size_t output
         if (iteration == 0)
         {
             outFile << endl << this->GetAlgName() << endl;
-            outFile << left << setw(10) << setfill(' ') << "Input"
-                << left << setw(10) << setfill(' ') << "Output"
-                << left << setw(10) << setfill(' ') << "Microseconds"
+            outFile << left << setw(30) << setfill(' ') << "Input"
+                << left << setw(30) << setfill(' ') << "Output"
+                << left << setw(30) << setfill(' ') << "Microseconds"
                 << endl;
         }
 
-        outFile << left << setw(10) << setfill(' ') << input[iteration]
-            << left << setw(10) << setfill(' ') << output[iteration]
-            << left << setw(15) << setfill(' ')
+        outFile << left << setw(30) << setfill(' ') << input[iteration]
+            << left << setw(30) << setfill(' ') << output[iteration]
+            << left << setw(30) << setfill(' ')
             << std::chrono::duration_cast<std::chrono::microseconds>(stop[iteration] - start[iteration]).count()
             << endl;
     }
